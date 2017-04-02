@@ -1,14 +1,13 @@
 let arr = [];
 
 const container = document.querySelector('.data-container');
-const containerList = document.querySelectorAll('.data-container');
 const ul = document.createElement('ul');
 
 container.insertBefore(ul, container.firstChild);
 const dataTarget = document.body.querySelector('ul');
+
+
 var i = 0;
-
-
 while (i < data.length ) {
   arr.push(data[i].first_name + ' ' + data[i].last_name);
   i = i + 1;
@@ -21,6 +20,7 @@ for ( var x = 0; x < arr.length; x++ ) {
   dataTarget.children[x].id = x;
   dataTarget.children[x].innerHTML = arr[x];
 }
+
 
 const input = document.getElementById('search');
 input.addEventListener( 'keyup', () => {
@@ -51,4 +51,5 @@ function arrSearch(list, val) {
     }
     i++
   }
+
 }
